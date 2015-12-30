@@ -1,7 +1,7 @@
 # VKDelayedPost
 Скрипт позволяет отправлять записи на стену по таймеру(на пример 01.01.16 в 00:00), просто запускаете программу, вводите необходимые данные, программа работает в фоне ожидая указанного момента.
 
-<h1>Авторизация<h1>
+<h1>Авторизация</h1>
 Авторизоватся можно <a href="https://oauth.vk.com/authorize?client_id=5208875&scope=friends,photos,audio,video,docs,notes,pages,status,wall,groups,messages,email,stats,offline&response_type=token">тут</a><br>
 Внимание! Программе предоставляются все без исключения разрешения, вы можете вручную поудалять все. Необходимые: wall, photos.
 
