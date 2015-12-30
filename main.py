@@ -31,7 +31,7 @@ if attachments == 'Y':
 
     method_url = 'https://api.vk.com/method/photos.saveWallPhoto?'
     if result['type'] == 'group':
-        data = dict(access_token=token, gid=result['object_id'], photo=response['photo'], hash=response['hash'], server=response['server'])
+        data = dict(access_token=token, owner_id=result['object_id'], photo=response['photo'], hash=response['hash'], server=response['server'])
     if result['type'] == 'user':
         data = dict(access_token=token, owner_id=result['object_id'], photo=response['photo'], hash=response['hash'], server=response['server'])
     response = r.post(method_url, data)
