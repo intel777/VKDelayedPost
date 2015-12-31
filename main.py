@@ -17,6 +17,7 @@ else:
     print('Detected: User, {}'.format(wall_id))
 
 content = input('Введите текст поста: ')
+
 attachments = input('Какие-нибудь вложения?[Y/n]: ')
 if attachments == 'Y':
     attachment_dir = input('Название картинки(должна лежать радом с этим файлом): ')
@@ -34,6 +35,7 @@ if attachments == 'Y':
     response = r.post(method_url, data)
     result = json.loads(response.text)['response'][0]['id']
     print("Entering sleep mode until launch date...")
+    
 while True:
     now_time = datetime.datetime.now()
     cur_datetime = now_time.strftime("%H:%M:%S %d.%m.%y")
