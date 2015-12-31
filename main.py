@@ -34,7 +34,7 @@ if attachments == 'Y':
     data = dict(access_token=token, owner_id=result['object_id'], photo=response['photo'], hash=response['hash'], server=response['server'])
     response = r.post(method_url, data)
     result = json.loads(response.text)['response'][0]['id']
-    print("Entering sleep mode until launch date...")
+print("Entering sleep mode until launch date...")
     
 while True:
     now_time = datetime.datetime.now()
