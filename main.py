@@ -29,11 +29,11 @@ if attachments == 'Y':
     resp = r.post(url, data, files=files)
     response = json.loads(resp.text)
 
-    method_url = 'https://api.vk.com/method/photos.saveWallPhoto?
+    method_url = 'https://api.vk.com/method/photos.saveWallPhoto?'
     data = dict(access_token=token, owner_id=result['object_id'], photo=response['photo'], hash=response['hash'], server=response['server'])
     response = r.post(method_url, data)
     result = json.loads(response.text)['response'][0]['id']
-
+    print("Entering sleep mode until launch date...")
 while True:
     now_time = datetime.datetime.now()
     cur_datetime = now_time.strftime("%H:%M:%S %d.%m.%y")
