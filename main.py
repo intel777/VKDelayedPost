@@ -22,7 +22,7 @@ attachments = input('Какие-нибудь вложения?[Y/n]: ')
 if attachments == 'Y':
     attachment_dir = input('Название картинки(должна лежать радом с этим файлом): ')
     upload = api.photos.getWallUploadServer(owner_id = wall_id)
-    files = {'photo': ('{}'.format(attachment_dir), open(r'{}'.format(attachment_dir), 'rb'))}
+    files = {'photo': (attachment_dir, open(r'{}'.format(attachment_dir), 'rb'))}
     url = upload['upload_url']
     data={"aid":upload['aid'],
           "mid":upload['mid']
