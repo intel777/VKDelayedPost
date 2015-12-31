@@ -5,7 +5,7 @@ session = vk.AuthSession(access_token=token)
 api = vk.API(session)
 api.stats.trackVisitor()
 
-needed_datetime = input('Введите дату в формате "HH:MM:SS DD:MM:YY": ')
+needed_datetime = input('Введите дату в формате "HH:MM:SS DD.MM.YY": ')
 
 screen_name = input('Введите короткую ссылку пользователя/группы: ')
 result = api.utils.resolveScreenName(screen_name=screen_name)
